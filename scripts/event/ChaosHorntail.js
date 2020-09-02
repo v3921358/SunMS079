@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function init(){em.setProperty("state","0");em.setProperty("leader","true")}function setup(a,b){em.setProperty("state","1");em.setProperty("leader","true");a=em.newInstance("ChaosHorntail");a.createInstanceMap(240060201).resetFully();a.startEventTimer(72E5);return a}function playerEntry(a,b){var c=a.getMapInstance(0);b.changeMap(c,c.getPortal(0))}function changedMap(a,b,c){240060201!=c&&(a.unregisterPlayer(b),a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true")))}function playerDisconnected(a,b){return 0}function scheduledTimeout(a){a.disposeIfPlayerBelow(100,240050400);em.setProperty("state","0");em.setProperty("leader","true")}function playerExit(a,b){a.unregisterPlayer(b);a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true"))}function monsterValue(a,b){return 1}function allMonstersDead(a){a=em.getProperty("state");a.equals("1")?em.setProperty("state","2"):a.equals("2")&&em.setProperty("state","3")}function playerRevive(a,b){return!1}function clearPQ(a){scheduledTimeout(a)}function leftParty(a,b){}function disbandParty(a){}function playerDead(a,b){}function cancelSchedule(){};

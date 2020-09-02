@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型:  任务	    
+ 脚本版权：游戏盒团队
+ 联系扣扣：297870163    609654666
+ =====================
+ */var status=-1;function start(a,b,c){if(-1==a)qm.dispose();else{if(1==a)status++;else{if(0==status){qm.dispose();return}1==status&&(qm.sendOk("\u771f\u7684\u6ca1\u4eba\u6765\u6551\u6211\u4e86\u5417\uff1f\u545c\u545c\u2026\u2026"),qm.dispose());status--}0==status?qm.sendNext("\u545c\u545c\u2026\u2026\u6709\u6ca1\u6709\u4eba\u6765\u6551\u6211\u554a\uff1f\u6211\u662f\u4ece\u57c3\u5fb7\u5c14\u65af\u5766\u5230\u65b0\u53f6\u57ce\u6765\u65c5\u884c\u7684\uff0c\u53ef\u662f\u7a81\u7136\u6709\u4e00\u6247\u5947\u602a\u7684\u5927\u95e8\u88ab\u6253\u5f00\uff0c\u6709\u5f88\u591a\u602a\u7269\u4ece\u90a3\u6247\u95e8\u51b2\u51fa\u6765\uff0c\u6293\u8d70\u4e86\u65b0\u53f6\u57ce\u7684\u5e02\u6c11\uff0c\u5360\u9886\u4e86\u65b0\u53f6\u57ce\uff01"):1==status?qm.sendYesNo("\u5192\u9669\u5bb6\uff0c\u4f60\u53ef\u4e0d\u53ef\u4ee5\u6765\u65b0\u53f6\u57ce\u6551\u6211\u554a\uff1f"):2==status&&(qm.forceCompleteQuest(),qm.forceCompleteQuest(56201),qm.forceCompleteQuest(56202),qm.forceCompleteQuest(56203),qm.warp(703E6,0),qm.dispose())}}function end(a,b,c){qm.dispose()};

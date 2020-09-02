@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */var instanceId,returnmap;function init(){}function monsterValue(a,b){return 1}function setup(){returnmap=em.getChannelServer().getMapFactory().getMap(130010100);var a=em.newInstance("enterDisguise3"+instanceId);a.createInstanceMap(108010620);instanceId++;em.schedule("timeOut",6E5);return a}function playerEntry(a,b){var c=a.getMapInstance(108010620,0);c.addMapTimer(180);b.changeMap(c,c.getPortal(0))}function playerExit(a,b){a.unregisterPlayer(b);b.changeMap(exitMap,exitMap.getPortal(0));0==a.getPlayerCount()&&a.dispose()}function timeOut(){for(var a=em.getInstances().iterator();a.hasNext();){var b=a.next();if(0<b.getPlayerCount())for(var c=b.getPlayers().iterator();c.hasNext();)playerExit(b,c.next());b.dispose()}}function playerDisconnected(a,b){return 0}function clear(a){var b=a.getPlayers().get(0);b.changeMap(returnMap,returnMap.getPortal(0));a.unregisterPlayer(b);em.cancel();em.disposeInstance("enterDisguise3");a.dispose()}function cancelSchedule(){};

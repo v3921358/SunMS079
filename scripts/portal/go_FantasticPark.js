@@ -1,0 +1,1 @@
+function enter(a){a.warp(223E6,0)};

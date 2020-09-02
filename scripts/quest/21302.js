@@ -1,0 +1,1 @@
+var status=-1;function start(a,b,c){qm.forceStartQuest();qm.dispose()}function end(a,b,c){qm.removeAll(4032312);qm.changeJob(2111);qm.forceCompleteQuest();qm.forceCompleteQuest();qm.dispose()};

@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */var minPlayers=1;function init(){em.setProperty("state","0");em.setProperty("leader","true")}function setup(a,b){em.setProperty("state","1");em.setProperty("leader","true");a=em.newInstance("ProtectPig"+b);em.setProperty("stage","0");a.setInstanceMap(92301E4).resetFully();a.startEventTimer(3E5);return a}function playerEntry(a,b){var c=a.getMapInstance(0);b.changeMap(c,c.getPortal(0))}function playerRevive(a,b){}function scheduledTimeout(a){end(a)}function changedMap(a,b,c){92301E4!=c&&(a.unregisterPlayer(b),a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true")))}function playerDisconnected(a,b){return 0}function monsterValue(a,b){9300102==b&&(a.broadcastPlayerMsg(5,"\u597d\u53ef\u60dc\u91ce\u8c6c\u6b7b\u4e86...."),end(a));return 1}function playerExit(a,b){a.unregisterPlayer(b);a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true"))}function end(a){a.disposeIfPlayerBelow(100,923010100);em.setProperty("state","0");em.setProperty("leader","true")}function clearPQ(a){end(a)}function allMonstersDead(a){}function leftParty(a,b){a.getPlayers().size()<minPlayers?end(a):playerExit(a,b)}function disbandParty(a){end(a)}function playerDead(a,b){}function cancelSchedule(){};

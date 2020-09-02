@@ -1,0 +1,1 @@
+function enter(a){0<a.itemQuantity(3992040)&&(a.playPortalSE(),a.warp(610010004,"U5_1"))};

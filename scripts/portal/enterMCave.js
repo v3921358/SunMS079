@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型:  传送门    
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function enter(a){map=a.getPlayer().getMap();if(1==a.isQuestActive(21201))a.forceStartQuest(21202),a.playerMessage(5,"\u4f60\u6062\u590d\u4e86\u4f60\u7684\u8bb0\u5fc6 !"),a.warp(108000700,0);else{if(a.isQuestFinished(21303))return a.playerMessage(5,"\u4f60\u5df2\u7ecf\u5b8c\u6210\u4e86\u4efb\u52a1"),!0;if(1==!a.isQuestActive(21302))return a.playerMessage(5,"\u4f60\u6ca1\u6709\u63a5\u53d7\u76f8\u5173\u4efb\u52a1"),!0;if(0>=a.getPlayer().getSkillLevel(20001007))return a.playerMessage(5,"\u4f60\u6ca1\u6709\u5b8c\u6210\u953b\u9020\u6280\u80fd\uff0c\u8bf7\u5148\u53bb\u627e\u8499\u7279\u9e20\u534f\u4f1a\u957f\uff08\u5361\u68ee\uff09\u63a5\u53d7\u76f8\u5173\u4efb\u52a1"),!0;if(0>=!a.getPlayerCount(108010702))return a.playerMessage(5,"\u91cc\u9762\u6709\u4eba\uff0c\u8bf7\u7a0d\u540e..."),!0;a.forceStartQuest(21303);a.getMap(108010702).resetFully();a.warp(108010702,0);a.getPlayer().startMapTimeLimitTask(600,map);a.playerMessage(5,"\u6d88\u706d\u5c0f\u5077\u4e4c\u9e26\u5e76\u6536\u96c6\u7ea2\u73e0\u7389\u4e00\u4e2a,\u5728\u51fa\u53bb\u627e\u5b9d\u77f3\u5de5\u5320\u96ea\u4eba\u5b8c\u6210\u4efb\u52a1\u540e.\u953b\u9020\u529f\u80fd\u5c06\u4f1a\u591a\u4e00\u4e2a\u5176\u5b83\u953b\u9020")}};

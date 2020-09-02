@@ -1,0 +1,1 @@
+function act(){var a=rm.getMap().getReactorByName("eak");a.forceHitReactor(a.getState()+1);rm.dropItems()};

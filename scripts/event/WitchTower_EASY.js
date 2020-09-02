@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function init(){em.setProperty("goldkey","0")}function playerEntry(a,b){for(var c=980041E3;980041009>=c;c++){var d=em.getMapFactory().getMap(c);if(0==d.getCharactersSize()){a=em.getInstance(b.getName());a.startEventTimer(18E4);d.shuffleReactors();b.changeMap(d,d.getPortal(0));return}}playerExit(a,b)}function playerExit(a,b){var c=em.getMapFactory().getMap(98004E4);b.changeMap(c,c.getPortal(0));a.dispose()}function scheduledTimeout(a){a.disposeIfPlayerBelow(100,98004E4)}function changedMap(a,b,c){switch(c){case 980041E3:case 980041001:case 980041002:case 980041003:case 980041004:case 980041005:case 980041006:case 980041007:case 980041008:case 980041009:case 980041100:case 980041101:case 980041102:case 980041103:case 980041104:case 980041105:case 980041106:case 980041107:case 980041108:case 980041109:case 980041200:case 980041201:case 980041202:case 980041203:case 980041204:case 980041205:case 980041206:case 980041207:case 980041208:case 980041209:return}a.unregisterPlayer(b);a.dispose()}function playerDisconnected(a,b){return 0}function clear(a){a.dispose()}function cancelSchedule(){}function playerDead(){}function playerRevive(a,b){}function monsterValue(a,b){return 1}function leftParty(a,b){}function disbandParty(a){};

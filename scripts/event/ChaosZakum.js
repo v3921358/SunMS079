@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function init(){em.setProperty("state","0");em.setProperty("leader","true")}function setup(a,b){em.setProperty("state","1");em.setProperty("leader","true");a=em.newInstance("ChaosZakum"+b);a.setProperty("zakSummoned","0");a.createInstanceMap(280030001).resetFully();a.startEventTimer(45E5);return a}function playerEntry(a,b){var c=a.getMapInstance(0);b.changeMap(c,c.getPortal(0))}function playerRevive(a,b){return!1}function changedMap(a,b,c){280030001!=c&&(a.unregisterPlayer(b),a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true")))}function playerDisconnected(a,b){return 0}function scheduledTimeout(a){end(a)}function monsterValue(a,b){return 1}function playerExit(a,b){a.unregisterPlayer(b);a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true"))}function end(a){a.disposeIfPlayerBelow(100,211042301);em.setProperty("state","0");em.setProperty("leader","true");em.setProperty("zakSummoned","0")}function clearPQ(a){end(a)}function allMonstersDead(a){em.getProperty("state").equals("1")?em.setProperty("state","2"):em.getProperty("state").equals("2")&&em.setProperty("state","3")}function leftParty(a,b){}function disbandParty(a){}function playerDead(a,b){}function cancelSchedule(){};

@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function init(){em.setProperty("leader","true");em.setProperty("state","0")}function setup(a,b){em.setProperty("leader","true");a=em.newInstance("ScarTarBattle");a.setInstanceMap(551030200).resetFully();em.setProperty("state","1");a.startEventTimer(36E5);return a}function playerEntry(a,b){var c=a.getMapFactory().getMap(551030200);b.changeMap(c,c.getPortal(0))}function playerRevive(a,b){return!1}function scheduledTimeout(a){a.disposeIfPlayerBelow(100,551030100);em.setProperty("state","0");em.setProperty("leader","true")}function changedMap(a,b,c){551030200!=c&&(a.unregisterPlayer(b),a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true")))}function playerDisconnected(a,b){return 0}function monsterValue(a,b){return 1}function playerExit(a,b){a.unregisterPlayer(b);a.disposeIfPlayerBelow(0,0)&&(em.setProperty("state","0"),em.setProperty("leader","true"))}function end(a){a.disposeIfPlayerBelow(100,551030100)&&(em.setProperty("state","0"),em.setProperty("leader","true"))}function clearPQ(a){end(a)}function allMonstersDead(a){}function leftParty(a,b){}function disbandParty(a){}function playerDead(a,b){}function cancelSchedule(){};

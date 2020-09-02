@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型:  任务	    
+ 脚本版权：游戏盒团队
+ 联系扣扣：297870163    609654666
+ =====================
+ */importPackage(Packages.client);var status=-1;function start(a,b,c){status++;if(1!=a)if(1==b&&0==a)status-=2;else{qm.sendNext("\u6211\u4eec\u9700\u8981\u4f60\u7684\u5e2e\u52a9\u3002");qm.dispose();return}0==status?qm.sendYesNo("\u5c31\u50cf\u6211\u521a\u624d\u544a\u8bc9\u4f60\u7684\u4e00\u6837\uff0c\u521a\u521a\u6253\u7834\u7684\u969c\u788d\u4e0d\u503c\u5f97\u5e86\u795d\uff0c\u8fd9\u662f\u56e0\u4e3a\u4f01\u9e45\u738b\u56fd\u7981\u6b62\u8ba9\u6240\u6709\u4eba\u8fdb\u5165\u57ce\u5821\uff0c\u55ef\u3002\u3002\u5f97\u627e\u51fa\u53e6\u5916\u4e00\u79cd\u6f5c\u5165\u65b9\u5f0f\u3002"):1==status?qm.sendNext("\u8def\u8fc7\u8611\u83c7\u68ee\u6797\uff0c\u5f53\u4f60\u5230\u5c4f\u969c\u7684\u65f6\u5019\uff0c\u5c31\u53ef\u4ee5\u8d70\u8fdb\u57ce\u5899\u4e86\uff0c\u795d\u4f60\u597d\u8fd0\u3002"):2==status&&(qm.forceStartQuest(),qm.dispose())}function end(a,b,c){status++;if(1!=a)if(1==b&&0==a)status-=2;else{qm.dispose();return}0==status?qm.sendOk("\u55ef\u3002\u3002\u53ef\u80fd\u4ed6\u4eec\u5df2\u7ecf\u5173\u95ed\u5927\u95e8\u3002"):1==status&&(qm.gainExp(11E3),qm.sendOk("\u5e72\u5f97\u597d\uff0c\u592a\u8c22\u8c22\u4f60\u4e86\u3002"),qm.forceCompleteQuest(),qm.dispose())};

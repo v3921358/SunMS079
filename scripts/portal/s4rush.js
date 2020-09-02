@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型:  传送门    
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function enter(a){if(1==a.getQuestStatus(6110))if(null!=a.getParty())if(a.isLeader())if(2>a.getParty().getMembers().size)a.playerMessage("\u5f53\u4f60\u6709\u4e00\u4e2a\u4e24\u4e2a\u961f\u5458\u7684\u961f\u4f0d\u7684\u65f6\u5019\uff0c\u4f60\u53ef\u4ee5\u505a\u8fd9\u4e2a\u4efb\u52a1\u3002");else if(a.isAllPartyMembersAllowedJob(1)){var b=a.getEventManager("4jrush");if(null==b)a.playerMessage("\u4f60\u4e0d\u88ab\u5141\u8bb8\u8fdb\u5165\u672a\u77e5\u7684\u539f\u56e0\u3002\u518d\u8bd5\u4e00\u6b21.");else return b.startInstance(a.getParty(),a.getMap()),!0}else a.playerMessage("\u4f60\u4e0d\u80fd\u8fdb\u5165\u3002\u4f60\u7684\u961f\u5458\u804c\u4e1a\u4e0d\u662f\u6218\u58eb\uff0c\u4f60\u7684\u961f\u4f0d\u6ca1\u6709\u4e24\u4e2a\u6210\u5458.");else a.playerMessage("\u7531\u4e24\u4e2a\u6218\u58eb\u7ec4\u6210\u7684\u961f\u4f0d\u7684\u961f\u957f\u53ef\u4ee5\u51b3\u5b9a\u8fdb\u5165.");else a.playerMessage(5,"\u4f60\u6ca1\u6709\u4e00\u4e2a\u961f\u4f0d.");else a.playerMessage("\u4f60\u4e0d\u80fd\u8fdb\u5165\u8fd9\u4e2a\u5730\u65b9.");return!1};

@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型:  传送门    
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function enter(a){try{var f=a.getMapId(),d=(f/100|0)-9800400,b=0,c="";switch(d){case 10:c="WitchTower_EASY";b=13E4;break;case 11:c="WitchTower_EASY";b=8E4;break;case 20:c="WitchTower_Med";b=13E4;break;case 21:c="WitchTower_Med";b=8E4;break;case 30:c="WitchTower_Hard";b=51E4;break;case 31:c="WitchTower_Hard";b=46E4;break;default:a.playerMessage("\u9519\u8bef: \u65e0\u6548\u5730\u56fe "+a.getPlayer().getMapId());return}var e=a.getEventManager(c).getInstance(a.getName());if(null!=e){if(e.getTimeLeft()>b)return a.playerMessage(5,"\u60a8\u5df2\u88ab\u79fb\u52a8\u5230\u53e6\u4e00\u4e2a\u4f4d\u7f6e\uff0c\u7531\u4e8e\u975e\u6cd5\u7b2c\u4e09\u65b9\u7a0b\u5e8f\u7684\u4f7f\u7528."),a.warp(98004E4,0),!0;switch(d){case 11:case 21:case 31:e.restartEventTimer(18E4)}}for(d=0;10>d;d++)if(b=f+100+d,0==a.getPlayerCount(b))return a.warp(b,0),!0;a.playerMessage(5,"\u6240\u6709\u5730\u56fe\u76ee\u524d\u6b63\u5728\u4f7f\u7528\u4e2d.");return!1}catch(g){a.playerMessage(5,"\u9519\u8bef: "+g)}};

@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型:  传送门    
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function enter(a){0==!a.getPlayerCount(130010010)?a.playerMessage("\u5730\u56fe\u6709\u4eba."):a.haveItem(4032179,1)?1==a.getQuestStatus(20301)?(a.removeNpc(130010010,1104100),a.getMap(130010010).killAllMonsters(!1),a.getMap(130010010).spawnNpc(1104100,new java.awt.Point(2517,88)),a.warp(130010010,0)):1==a.getQuestStatus(20302)?(a.removeNpc(130010010,1104101),a.getMap(130010010).killAllMonsters(!1),a.getMap(130010010).spawnNpc(1104101,new java.awt.Point(2517,88)),a.warp(130010010,0)):1==a.getQuestStatus(20303)?(a.removeNpc(130010010,1104102),a.getMap(130010010).killAllMonsters(!1),a.getMap(130010010).spawnNpc(1104102,new java.awt.Point(2517,88)),a.warp(130010010,0)):1==a.getQuestStatus(20304)?(a.removeNpc(130010010,1104103),a.getMap(130010010).killAllMonsters(!1),a.getMap(130010010).spawnNpc(1104103,new java.awt.Point(2517,88)),a.warp(130010010,0)):1==a.getQuestStatus(20305)?(a.removeNpc(130010010,1104104),a.getMap(130010010).killAllMonsters(!1),a.getMap(130010010).spawnNpc(1104104,new java.awt.Point(2517,88)),a.warp(130010010,0)):a.playerMessage("\u4f60\u6ca1\u6709\u63a5\u53d7\u4efb\u52a1!"):a.playerMessage("\u4f60\u6ca1\u6709\u5723\u5730\u641c\u67e5\u8bc1\u7684\u8bdd\uff0c\u8bf7\u4ece\u5357\u54c8\u7279\u5f97\u5230\u5b83.")};

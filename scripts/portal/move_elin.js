@@ -1,0 +1,1 @@
+function enter(a){if(a.isQuestFinished(21749)&&!a.isQuestFinished(21750))a.forceStartQuest(21750),a.warp(300000100,"out00"),a.playerMessage(5,"\u53bb\u627e\u8d6b\u96f7\u5a1c\u770b\u770b\u5427.");else return a.warp(300000100,"out00"),a.playerMessage(5,"\u73b0\u5728\u901a\u8fc7\u65f6\u95f4\u95e8."),!0};

@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function init(){em.setProperty("noEntry","false")}function setup(a){em.setProperty("noEntry","true");a=em.newInstance("DollHouse"+a);var b=a.setInstanceMap(922000010);b.resetFully();b.shuffleReactors();a.startEventTimer(6E5);return a}function playerEntry(a,b){b.changeMap(a.getMapInstance(0),a.getMapInstance(0).getPortal(0))}function changedMap(a,b,c){922000010!=c&&clear(a)}function playerExit(a,b){clear(a)}function scheduledTimeout(a){clear(a)}function playerDisconnected(a,b){em.setProperty("noEntry","false");b.getMap().removePlayer(b);a.unregisterPlayer(b);b.setMap(em.getChannelServer().getMapFactory().getMap(221023200));a.dispose()}function clear(a){em.setProperty("noEntry","false");var b=a.getPlayers().get(0);a.unregisterPlayer(b);b.changeMap(em.getChannelServer().getMapFactory().getMap(221023200),em.getChannelServer().getMapFactory().getMap(221023200).getPortal(4));a.dispose()}function cancelSchedule(){};

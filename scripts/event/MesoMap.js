@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型: 脚本
+ 版权：游戏盒团队     
+ 联系扣扣：297870163    609654666
+ =====================
+ */function init(){}function setup(a){a=em.newInstance("MesoMap"+a);var b=a.createInstanceMap(260020700);b.resetAllSpawnPoint(9400202,1);b.setReturnMapId(91E7);b.setForcedReturnMap(91E7);b.blockAllPortal();b.toggleGDrops();a.startEventTimer(18E5);return a}function playerEntry(a,b){var c=a.getMapInstance(0);b.changeMap(c,c.getPortal(0))}function playerRevive(a,b){return!1}function scheduledTimeout(a){end(a)}function changedMap(a,b,c){260020700!=c&&(a.unregisterPlayer(b),a.disposeIfPlayerBelow(0,0))}function playerDisconnected(a,b){return 0}function monsterValue(a,b){return 1}function playerExit(a,b){a.unregisterPlayer(b);a.disposeIfPlayerBelow(0,0)}function end(a){for(var b=a.getMapInstance(0).getCharactersThreadsafe().iterator(),c=a.getMapFactory().getMap(91E7);b.hasNext();){var d=b.next();a.unregisterPlayer(d);d.changeMap(c,c.getPortal(0))}a.dispose()}function clearPQ(a){}function allMonstersDead(a){}function leftParty(a,b){}function disbandParty(a){}function playerDead(a,b){}function cancelSchedule(){};

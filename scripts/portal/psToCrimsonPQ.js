@@ -1,0 +1,1 @@
+function enter(a){a.warp(803000400,"st00")};

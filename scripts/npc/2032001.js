@@ -1,0 +1,6 @@
+/* Spiruna
+	Orbis : Old Man's House (200050001)
+	
+	Refining NPC: 
+	* Dark Crystal - Half Price compared to Vogen, but must complete quest 
+*/var status=0,selectedItem=-1;function start(){status=-1;action(1,0,0)}function action(a,c,b){1==a?status++:cm.dispose();0==status&&1==a?2==cm.getQuestStatus(3034)?cm.sendYesNo("\u4f60\u5bf9\u6211\u6709\u8fd9\u4e48\u591a\u7684\u5e2e\u52a9...\u5982\u679c\u4f60\u6709\u4efb\u4f55\u9ed1\u6c34\u6676\u77ff\u77f3\uff0c\u6211\u53ef\u4ee5\u4e3a\u4f60\u6539\u8fdb\u5b83 #b500000 \u91d1\u5e01#k\u6bcf\u4e2a."):(cm.sendOk("\u8d70\u5f00\uff0c\u6211\u60f3\u6253\u5750."),cm.dispose()):1==status&&1==a?cm.sendGetNumber("\u597d\u4e86\uff0c\u591a\u5c11\u4f60\u8981\u6211\u505a?",1,1,100):2==status&&1==a&&(cm.getMeso()<5E5*b?cm.sendOk("\u5bf9\u4e0d\u8d77\uff0c\u6211\u4e0d\u662f\u514d\u8d39\u8fd9\u6837\u505a\u7684."):(a=cm.haveItem(4004004,10*b))?(cm.gainItem(4004004,-10*b),cm.gainMeso(-5E5*b),cm.gainItem(4005004,b),cm.sendOk("\u660e\u667a\u5730\u4f7f\u7528\u5b83.")):cm.sendOk("\u6211\u9700\u8981\u63d0\u70bc\u77ff\u77f3\u6c34\u6676\u505a\u3002\u6ca1\u6709\u4f8b\u5916.."),cm.dispose())};

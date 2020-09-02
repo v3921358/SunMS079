@@ -1,0 +1,56 @@
+/* ==================
+ 脚本类型: NPC	    
+ 脚本版权：游戏盒团队
+ 联系扣扣：297870163    609654666
+ =====================
+ */
+
+function start() {
+    if (cm.isQuestFinished(6226)|| cm.isQuestFinished(6316)|| cm.isQuestFinished(6315)) {
+	var ret = checkJob();
+	if (ret == -1) {
+	    cm.sendOk("请组建一个队伍，再和我说话.");
+	} else if (ret == 0) {
+	    cm.sendOk("请确保你的队伍有两个人");
+	} else if (ret == 1) {
+	    cm.sendOk("你的一个队员没有资格进入另一个世界.");
+	} else if (ret == 2) {
+	    cm.sendOk("你的一个队员没有资格进入另一个世界.");
+	} else {
+	    var dd = cm.getEventManager("ElementThanatos");
+	    if (dd != null) {
+		dd.startInstance(cm.getParty(), cm.getMap());
+	    } else {
+		cm.sendOk("发生未知错误.");
+	    }
+	}
+    } else {
+	cm.sendOk("似乎没有理由满足死神.");
+    }
+    cm.dispose();
+}
+
+function checkJob() {
+    var party = cm.getParty();
+
+    if (party == null) {
+	return -1;
+    }
+    if (party.getMembers().size() != 2) {
+	return 0;
+    }
+    var it = party.getMembers().iterator();
+
+    while (it.hasNext()) {
+	var cPlayer = it.next();
+
+	if (cPlayer.getJobId() == 212 || cPlayer.getJobId() == 222 || cPlayer.getJobId() == 900) {
+	    if (cPlayer.getLevel() < 120) {
+		return 2;
+	    }
+	} else {
+	    return 1;
+	}
+    }
+    return 3;
+}

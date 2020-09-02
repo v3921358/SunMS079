@@ -1,0 +1,6 @@
+/* ==================
+ 脚本类型:  任务	    
+ 脚本版权：游戏盒团队
+ 联系扣扣：297870163    609654666
+ =====================
+ */var status=-1;function start(a,b,c){qm.forceStartQuest();qm.dispose()}function end(a,b,c){qm.sendNextS("\u5c01\u5370\u77f3\u662f\u82f1\u96c4\u4eec\u7559\u4e0b\u7684\uff0c\u7ee7\u7eed\u5bf9\u82f1\u96c4\u8fdb\u884c\u7814\u7a76\u7684\u8bdd\uff0c\u5e94\u8be5\u4f1a\u77e5\u9053\u5c01\u5370\u77f3\u7684\u4f5c\u7528\uff0c\u80fd\u77e5\u9053\u8fd9\u4e9b\uff0c\u5df2\u7ecf\u662f\u5f88\u5927\u7684\u6536\u83b7\u4e86\u3002\u8bf4\u7740\uff0c#p1201000#\u628a\u65b0\u89e3\u8bfb\u51fa\u6765\u7684\u6280\u80fd\u544a\u8bc9\u4e86\u6211\u2026\u2026\u73b0\u5728\u53ef\u4ee5\u4f7f\u7528#b\u6218\u795e\u7a81\u8fdb#k\u6280\u80fd\u4e86\uff01",3);qm.teachSkill(21100002,0,30);qm.gainExp(1500);qm.forceCompleteQuest();qm.dispose()};
